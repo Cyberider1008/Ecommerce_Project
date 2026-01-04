@@ -1,6 +1,13 @@
 from django.urls import path
+from .import views
 
 
-# urlPatterns = [
-#     path(),
-# ]
+urlpatterns = [
+    path('categories/', views.get_category),
+    path('products/', views.get_products),
+    path('products/<int:pk>/', views.get_product),
+    path('cart/', views.get_cart),
+    path('cart/add/', views.add_to_cart),
+    path('cart/remove/', views.remove_from_cart),
+
+]
